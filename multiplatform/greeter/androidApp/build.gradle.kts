@@ -44,5 +44,7 @@ dependencies {
   debugRuntimeOnly(libs.compose.ui.tooling)
 
   implementation(libs.kotlinInject.runtime)
+  implementation(libs.kotlinInject.anvil.runtime)
+  implementation(libs.kotlinInject.anvil.runtime.optional)
   ksp(libs.kotlinInject.compiler)
 }

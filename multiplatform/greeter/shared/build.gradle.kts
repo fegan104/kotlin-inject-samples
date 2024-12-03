@@ -24,6 +24,8 @@ kotlin {
     commonMain {
       dependencies {
         implementation(libs.kotlinInject.runtime)
+        implementation(libs.kotlinInject.anvil.runtime)
+        implementation(libs.kotlinInject.anvil.runtime.optional)
       }
     }
     commonTest {
@@ -58,4 +60,9 @@ dependencies {
   add("kspIosX64", libs.kotlinInject.compiler)
   add("kspIosArm64", libs.kotlinInject.compiler)
   add("kspIosSimulatorArm64", libs.kotlinInject.compiler)
+
+  add("kspAndroid", libs.kotlinInject.anvil.compiler)
+  add("kspIosX64", libs.kotlinInject.anvil.compiler)
+  add("kspIosArm64", libs.kotlinInject.anvil.compiler)
+  add("kspIosSimulatorArm64", libs.kotlinInject.anvil.compiler)
 }

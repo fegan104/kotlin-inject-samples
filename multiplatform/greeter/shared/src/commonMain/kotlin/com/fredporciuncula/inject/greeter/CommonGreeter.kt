@@ -10,5 +10,6 @@ class CommonGreeter(
 ) {
   fun greet() {
     greeter.greet("Hello from $platform! [${version.value}]")
+//    println("Hello from $platform! [${version.value}]")
   }
 }

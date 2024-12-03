@@ -6,6 +6,7 @@ compose-compiler = '1.5.14'
 kotlin = '2.0.0'
 kotlinInject = '0.7.1'
 ksp = '2.0.0-1.0.22'
+anvil = '0.1.1'
 
 [libraries]
 androidx-activity-compose = { module = 'androidx.activity:activity-compose', version.ref = 'androidx-activity' }
@@ -20,6 +21,9 @@ compose-ui-toolingPreview = { module = 'androidx.compose.ui:ui-tooling-preview' 
 kotlin-test = { module = 'org.jetbrains.kotlin:kotlin-test', version.ref = 'kotlin' }
 kotlinInject-compiler = { module = 'me.tatarka.inject:kotlin-inject-compiler-ksp', version.ref = 'kotlinInject' }
 kotlinInject-runtime = { module = 'me.tatarka.inject:kotlin-inject-runtime-kmp', version.ref = 'kotlinInject' }
+kotlinInject-anvil-compiler = { module = "software.amazon.lastmile.kotlin.inject.anvil:compiler", version.ref = "anvil" }
+kotlinInject-anvil-runtime = { module = "software.amazon.lastmile.kotlin.inject.anvil:runtime", version.ref = "anvil" }
+kotlinInject-anvil-runtime-optional = { module = "software.amazon.lastmile.kotlin.inject.anvil:runtime-optional", version.ref = "anvil" }
 
 [plugins]
 android-application = { id = 'com.android.application', version.ref = 'agp' }
