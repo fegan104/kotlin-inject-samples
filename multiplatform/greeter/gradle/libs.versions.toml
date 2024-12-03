@@ -1,11 +1,11 @@
 [versions]
-agp = '8.2.0'
+agp = "8.5.0"
 androidx-activity = '1.9.0'
 compose-bom = '2024.06.00' # https://developer.android.com/jetpack/compose/bom/bom-mapping
 compose-compiler = '1.5.14'
-kotlin = '2.0.0'
+kotlin = '2.0.20'
 kotlinInject = '0.7.1'
-ksp = '2.0.0-1.0.22'
+ksp = '2.0.20-1.0.24'
 anvil = '0.1.1'
 
 [libraries]
@@ -29,6 +29,6 @@ kotlinInject-anvil-runtime-optional = { module = "software.amazon.lastmile.kotli
 android-application = { id = 'com.android.application', version.ref = 'agp' }
 android-library = { id = 'com.android.library', version.ref = 'agp' }
 kotlin-android = { id = 'org.jetbrains.kotlin.android', version.ref = 'kotlin' }
-kotlin-multiplatform = { id = 'org.jetbrains.kotlin.multiplatform', version.ref = 'kotlin' }
+kotlin-multiplatform = { id = 'org.jetbrains.kotlin.multiplatform', version = '2.0.20' }
 ksp = { id = 'com.google.devtools.ksp', version.ref = 'ksp' }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
