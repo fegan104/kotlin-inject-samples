@@ -1,10 +1,10 @@
 package com.fredporciuncula.inject.greeter.android
 
 import android.content.Context
-import com.fredporciuncula.inject.greeter.ApplicationComponent
+import com.fredporciuncula.inject.greeter.AndroidAppComponent
 
 interface ApplicationComponentProvider {
-  val component: ApplicationComponent
+  val component: AndroidAppComponent
 }
 
 val Context.applicationComponent get() = (applicationContext as ApplicationComponentProvider).component

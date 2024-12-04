@@ -1,23 +1,18 @@
 import SwiftUI
 import shared
 
-struct ContentView: View {
-  private let greeter = ApplicationComponent.companion.from().greeter
-
-  // Or we can also access the generated implementation directly and drop our companion object
-//  private let greeter = InjectApplicationComponent().greeter
-
-  var body: some View {
-    Button {
-      greeter.greet()
-    } label: {
-      Text("Greet!")
+struct ComposeView: UIViewControllerRepresentable {
+    let viewModelFactory = IosAppComponent.companion.from().viewModelFactory
+    func makeUIViewController(context: Context) -> UIViewController {
+        HomeViewControllerKt.HomeViewController(viewModelFactory: viewModelFactory)
     }
-  }
+
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
 }
 
-struct ContentView_Previews: PreviewProvider {
-  static var previews: some View {
-    ContentView()
-  }
+struct ContentView: View {
+    var body: some View {
+        ComposeView()
+                .ignoresSafeArea(.keyboard) // Compose has own keyboard handler
+    }
 }

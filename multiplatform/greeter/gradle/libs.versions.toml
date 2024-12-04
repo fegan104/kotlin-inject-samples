@@ -3,10 +3,12 @@ agp = "8.5.0"
 androidx-activity = '1.9.0'
 compose-bom = '2024.06.00' # https://developer.android.com/jetpack/compose/bom/bom-mapping
 compose-compiler = '1.5.14'
+compose-plugin = "1.6.10"
 kotlin = '2.0.20'
 kotlinInject = '0.7.1'
 ksp = '2.0.20-1.0.24'
 anvil = '0.1.1'
+lifecycleViewModel = "2.8.7"
 
 [libraries]
 androidx-activity-compose = { module = 'androidx.activity:activity-compose', version.ref = 'androidx-activity' }
@@ -24,6 +26,7 @@ kotlinInject-runtime = { module = 'me.tatarka.inject:kotlin-inject-runtime-kmp',
 kotlinInject-anvil-compiler = { module = "software.amazon.lastmile.kotlin.inject.anvil:compiler", version.ref = "anvil" }
 kotlinInject-anvil-runtime = { module = "software.amazon.lastmile.kotlin.inject.anvil:runtime", version.ref = "anvil" }
 kotlinInject-anvil-runtime-optional = { module = "software.amazon.lastmile.kotlin.inject.anvil:runtime-optional", version.ref = "anvil" }
+lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "lifecycleViewModel"}
 
 [plugins]
 android-application = { id = 'com.android.application', version.ref = 'agp' }
@@ -32,3 +35,4 @@ kotlin-android = { id = 'org.jetbrains.kotlin.android', version.ref = 'kotlin' }
 kotlin-multiplatform = { id = 'org.jetbrains.kotlin.multiplatform', version = '2.0.20' }
 ksp = { id = 'com.google.devtools.ksp', version.ref = 'ksp' }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }

@@ -1,12 +1,12 @@
 package com.fredporciuncula.inject.greeter.android
 
 import android.app.Application
-import com.fredporciuncula.inject.greeter.ApplicationComponent
+import com.fredporciuncula.inject.greeter.AndroidAppComponent
 import com.fredporciuncula.inject.greeter.Version
 import com.fredporciuncula.inject.greeter.create
 
 class GreeterApplication : Application(), ApplicationComponentProvider {
-  override val component: ApplicationComponent by lazy(LazyThreadSafetyMode.NONE) {
-    ApplicationComponent::class.create(applicationContext, Version(BuildConfig.VERSION_NAME))
+  override val component: AndroidAppComponent by lazy(LazyThreadSafetyMode.NONE) {
+    AndroidAppComponent::class.create(applicationContext, Version(BuildConfig.VERSION_NAME))
   }
 }

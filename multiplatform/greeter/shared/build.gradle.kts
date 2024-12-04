@@ -5,6 +5,8 @@ plugins {
   alias(libs.plugins.kotlin.multiplatform)
   alias(libs.plugins.android.library)
   alias(libs.plugins.ksp)
+  alias(libs.plugins.jetbrainsCompose)
+  alias(libs.plugins.compose.compiler)
 }
 
 kotlin {
@@ -26,6 +28,15 @@ kotlin {
         implementation(libs.kotlinInject.runtime)
         implementation(libs.kotlinInject.anvil.runtime)
         implementation(libs.kotlinInject.anvil.runtime.optional)
+        implementation(libs.lifecycle.viewmodel)
+        implementation("org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose:2.8.2")
+
+        implementation(compose.runtime)
+        implementation(compose.foundation)
+        implementation(compose.material)
+        implementation(compose.ui)
+        implementation(compose.components.resources)
+        implementation(compose.components.uiToolingPreview)
       }
     }
     commonTest {
